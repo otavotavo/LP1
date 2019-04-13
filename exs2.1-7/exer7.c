@@ -18,7 +18,7 @@ empates= malloc(20);
 
 
 
-for(int i=0;i<3;i++){
+for(int i=0;i<20;i++){
 	
 	printf("digite as vitorias do time %d\n",i);
 	scanf("%d",(vitorias+i));
@@ -32,19 +32,19 @@ for(int i=0;i<3;i++){
 };
 
 
-for(int i=0;i<3;i++){
+for(int i=0;i<20;i++){
 	*(pontos+i)=*(vitorias+i)*3+*(empates+i);
 };
 
 
-for(int i=0;i<3;i++){
+for(int i=0;i<20;i++){
 	if(*(pontos+i)>comparacao){
 		comparacao=*(pontos+i);
 		timemaior=i;
 	};
 };
 
-for(int i=0;i<3;i++){
+for(int i=0;i<20;i++){
 	if(*(pontos+i)<comparacaonegativa){
 		comparacaonegativa=*(pontos+i);
 		timemenor=i;
@@ -55,6 +55,12 @@ for(int i=0;i<3;i++){
 printf("Maior pontuaçao: o time %d tem: %d pontos\n",timemaior,comparacao);
 printf("Menor pontuaçao: o time %d tem: %d pontos\n",timemenor,comparacaonegativa);
 
+free(vitorias);
+free(derrotas);
+free(pontos);
+free(empates);
+	
+	
 return 0;
 
 };
