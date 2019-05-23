@@ -1,0 +1,5 @@
+1)um ele retorna o tipo struct, o outro ele recebe um endereço para um struct ja declarado e apenas preenche
+
+2)a segunda.Maior praticidade com ponteiro
+
+3)O uso de memoria é o mesmo ja que os dois preenchem um struct e a velocidade é a mesma pelo acesso cosntante
